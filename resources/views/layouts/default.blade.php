@@ -11,7 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- style -->
+    @stack('before-style')
     @include('includes.style')
+    @stack('after-style')
+
 </head>
 
 <body>
@@ -36,6 +39,11 @@
     </div>
  
     <!-- script -->
+    @stack('before-style')
     @include('includes.script')
+    @stack('after-style')
+
+    <!-- stack untuk memasukan script atau style khusu pada halaman tertentu saja, tidak kesemuanya -->
+    
 </body>
 </html>

@@ -128,6 +128,7 @@
                                         </td>
                                     </tr>
                                 </tbody>
+                                
                             </table>
                         </div> <!-- /.table-stats -->
                     </div>
@@ -154,3 +155,9 @@
 </div>
     
 @endsection
+
+{{-- @push('before-script')
+    
+@endpush --}}
+
+{{-- ini untuk ngepush sih style atau script khusunyaaa --}}
