@@ -30,7 +30,7 @@ class Product extends Model
     ];
 
 
-    //relasi
+    //relasi ke model ProductGallery
 
     public function galleries(){
 
