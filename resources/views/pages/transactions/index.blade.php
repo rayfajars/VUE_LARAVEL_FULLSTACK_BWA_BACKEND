@@ -32,11 +32,11 @@
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td>{{ $item->numer }}</td>
+                                        <td>{{ $item->number }}</td>
                                         <td>RP. {{ $item->transaction_total }}</td>
                                         <td>
                                             @if($item->transaction_status == "PENDING")
-                                            <span class="badge badge-info"> 
+                                            <span class="badge badge-warning"> 
                                             @elseif($item->transaction_status == "SUCCESS")
                                             <span class="badge badge-success"> 
                                             @elseif($item->transaction_status == "FAILED")
@@ -49,12 +49,12 @@
                                         </td>
                                         <td>
                                             @if($item->transaction_status == "PENDING")
-                                                {{-- <a href="{{ route('transactions.status',$item->id) }}?status=SUCCESS" class="btn btn-primary btn-sm">
+                                                <a href="{{ route('transactions.status',$item->id) }}?status=SUCCESS" class="btn btn-primary btn-sm">
                                                 <i class="fa fa-check"></i>
                                                 </a>
-                                                <a href="{{ route('transactions.status',$item->id) }}?status=FAILED" class="btn btn-danger btn-sm">
+                                                <a href="{{ route('transactions.status',$item->id) }}?status=FAILED" class="btn btn-warning btn-sm">
                                                     <i class="fa fa-times"></i>
-                                                    </a> --}}
+                                                    </a>
                                             @endif
                                             <a href="#mymodal" data-remote="{{ route('transactions.show',$item->id)}}" data-toggle="modal" data-target="#mymodal" data-title="Detail Transaksi {{ $item->uuid}}"  class="btn btn-info btn-sm">
                                                 <i class="fa fa-eye"></i>

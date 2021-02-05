@@ -39,11 +39,13 @@
     </div>
  
     <!-- script -->
-    @stack('before-style')
+    @stack('before-script')
     @include('includes.script')
-    @stack('after-style')
+    @stack('after-script')
 
     <!-- stack untuk memasukan script atau style khusu pada halaman tertentu saja, tidak kesemuanya -->
+
+    
     
 </body>
 </html>
